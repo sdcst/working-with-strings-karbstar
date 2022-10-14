@@ -13,7 +13,19 @@ def properCaps(input):
     return
     str - proper capitalized string
     '''
-    return
+    for x in input:
+        ia=input.index(x)
+        a=x.isupper()
+        if ia==0:
+            a=False
+        if a==True:
+            x=x.lower()
+            input = input[:ia] + x + input[ia+1:]
+
+
+
+        
+    return input
 
 
 if __name__ == "__main__":
@@ -22,3 +34,4 @@ if __name__ == "__main__":
 
     sentence = "I'm JuSt A LiTtle Black RainCLOUD!"
     assert properCaps(sentence) == "I'm just a little black raincloud!"
+    print('done')

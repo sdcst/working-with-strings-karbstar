@@ -18,16 +18,11 @@ def split(input):
     str new string with line break in the middle
     '''
     le=len(input)
-    print(le)
     bak=le/2
-    print(bak)
     bak=int(bak)
-    print(bak)
-    x=input[bak-1]
-    y=input[bak+1]
-    z=input[bak]
-    print(x,y)
-    if x==' ' or y==' ' or z==' ':
+    x=input[bak-1, bak+1, bak]
+
+    if x[0]==' ' or x[1]==' ' or x[2]==' ':
         input= input[:bak] + '\n' + input[bak:]
     else:
         input= input[:bak] + '-\n' + input[bak:]
